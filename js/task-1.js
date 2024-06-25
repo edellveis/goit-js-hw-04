@@ -10,6 +10,13 @@
 
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її викликів.
 
+function isEnoughCapacity(products, containerSize){
+  let totalFruit = 0;
+  for(const key in products){
+    totalFruit += products[key];
+  }
+  return totalFruit <= containerSize;
+}
 console.log(
   isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
 ); // true
